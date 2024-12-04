@@ -1,15 +1,13 @@
-import { Text, View } from "react-native";
+import React from "react";
+import {PaperProvider} from "react-native-paper";
+import theme from "@/src/styles/theme";
+import AppNavigation from "@/src/navigation/AppNavigation";
+
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+      <PaperProvider theme={theme}>
+        <AppNavigation />
+      </PaperProvider>
   );
 }
